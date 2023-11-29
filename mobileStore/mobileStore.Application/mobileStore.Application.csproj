@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Microsoft.AspNetCore.App" />
+	  <PackageReference Include="Microsoft.AspNetCore.Cryptography.Internal" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\mobileStore.Data\mobileStore.Data.csproj" />
+    <ProjectReference Include="..\mobileStore.Utilities\mobileStore.Utilities.csproj" />
+    <ProjectReference Include="..\mobileStore.ViewModels\mobileStore.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

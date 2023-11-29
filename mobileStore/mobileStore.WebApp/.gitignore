@@ -1,0 +1,10 @@
+# Bỏ qua file tạm thời và thư mục build
+.temp/
+/build/
+/wwwroot
+
+# Bỏ qua file log
+*.log
+
+# Bỏ qua file cấu hình cục bộ
+.env

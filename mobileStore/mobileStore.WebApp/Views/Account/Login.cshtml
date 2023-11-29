@@ -1,0 +1,99 @@
+﻿@model mobileStore.ViewModels.System.Users.LoginRequest
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="~/">Trang chủ</a></li>
+                        <li>Đăng nhập</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="row">
+        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-12 col-xs-12 ">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 mb20">
+                        <h3 class="mb10">Đăng nhập</h3>
+                    </div>
+                    <!-- form -->
+                    <form action="/Account/Login" method="post">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                            <div class="form-group" >
+                                <label class="control-label sr-only" for="email"></label>
+                                <div class="login-input">
+                                    <input class="form-control" style="text-transform: none;" type="text" asp-for="UserName" placeholder="Email" required>
+                                    <span asp-validation-for="UserName" class="text-error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                            <div class="form-group">
+                                <label class="control-label sr-only"></label>
+                                <div class="login-input">
+                                    <input type="password" style="text-transform: none;" class="form-control" asp-for="Password" placeholder="Password" required>
+                                    <span asp-validation-for="Password" class="text-error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb20 ">
+                            <button type="submit" class="btn btn-primary btn-block mb10">Đăng nhập</button>
+                            <div style="margin: 0 auto; width: 50%">
+                                <a href="/Account/Register" style="margin-right: 40px;" class="text-blue">Đăng ký</a>
+                                <a href="forgot-password.html" class="text-blue">Quên mật khẩu </a>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /.form -->
+                </div>
+            </div>
+        </div>
+        <!-- features -->
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+            <div class="box-body">
+                <div class="feature-left">
+                    <div class="feature-icon">
+                        <img src="images/feature_icon_1.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Mức độ uy tín!</h4>
+                        <p>Được đánh giá an toàn, tin cậy hàng đầu Việt Nam với nhiều chính sách hỗ trợ chăm sóc khách hàng.</p>
+                    </div>
+                </div>
+                <div class="feature-left">
+                    <div class="feature-icon">
+                        <img src="images/feature_icon_2.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Thanh toán tức thì!</h4>
+                        <p>
+                            Thanh toán mọi nơi mọi lúc, giao dịch nhanh gọn, bảo đảm, an toàn, với liên kết 90% ngân hàng, ví tiền, VISA trong toàn quốc!
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-left">
+                    <div class="feature-icon">
+                        <img src="images/feature_icon_3.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Ưu đãi hấp dẫn!</h4>
+                        <p>
+                            Với mong muốn làm hài lòng khách hàng, Mobistore luôn mang đến những ưu đãi cực kỳ tốt với chất lượng cao
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.features -->
+    </div>
+</div>

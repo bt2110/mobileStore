@@ -1,0 +1,165 @@
+﻿﻿@using mobileStore.ViewModels.Common;
+@model ProductCategoryViewModel;
+@{
+    ViewData["Title"] = (Model.Category?.Name ?? "") + (Model.Products?.PageIndex == 1 ? "" : " - Trang " + Model.Products?.PageIndex);
+    ViewData["Description"] = (Model.Category?.Name ?? "") + (Model.Products?.PageIndex == 1 ? "" : " - Trang " + Model.Products?.PageIndex);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="~/">Trang chủ</a></li>
+                            <li>Điện thoại</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /. header-section-->
+    <!-- product-list -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <!-- sidenav-section -->
+                <div id='cssmenu'>
+                    <ul>
+                        @await Component.InvokeAsync("SideBar")
+                    </ul>
+                </div>
+                <!-- /.sidenav-section -->
+            </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb10 alignright">
+                            <form>
+                                <div class="select-option form-group">
+                                    <select name="select" class="form-control" placeholder="Sắp xếp theo">
+                                        <option value="" default>Sắp xếp theo</option>
+                                        <option value="">Bán Chạy</option>
+                                        <option value="">Giá Thấp</option>
+                                        <option value="">Giá Cao</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <!-- product -->
+                    @for (int index = 0; index < Model.Products.Items.Count; index++)
+                    {
+                        var item = Model.Products.Items[index];
+                        var url = $"/san-pham/{item.Id}";
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
+                            <div class="product-block">
+                                <div class="product-img">
+                                    <img src="@(Configuration["BaseAddress"] + item.ThumbnailImage)" alt="@item.Name" style="min-height: 136px; max-height: 136px;">
+                                </div>
+                                <div class="product-content">
+                                    <h5><a href="@url" class="product-title"><strong>@item.Name</strong></a></h5>
+                                    <div class="product-meta">
+                                        @{
+                                            // Chuyển đổi DiscountPercentage sang kiểu số thực
+                                            decimal discountPercentageDecimal = (decimal)item.DiscountPercentage;
+
+                                            // Tính giá trị discounted-price
+                                            decimal discountedPrice = item.Price - (item.Price * (discountPercentageDecimal / 100));
+                                        }
+                                        <a href="@url" class="product-price">@(string.Format("{0:N0}" + " vn₫  ", discountedPrice))</a>
+                                        @if (item.DiscountPercentage > 0)
+                                        {
+                                            <a href="@url" class="discounted-price">@(string.Format("{0:N0}" + "  vn₫", item.Price))</a>
+                                            <span class="offer-price">@item.DiscountPercentage.ToString()% off</span>
+                                        }
+                                    </div>
+                                    <div class="shopping-btn">
+                                        <a class="product-btn btn-like"><i class="fa fa-heart"></i></a>
+                                        <a class="product-btn btn-cart add-to-cart-btn" data-id="@item.Id"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!-- /.product -->
+                </div>
+                    <div class="row">
+                        <!-- pagination start -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="st-pagination">
+                            @{
+                                //pageIndex=?&keyword=?
+                                var urlTemplate = Url.Action() + "?page={0}";
+                                var request = ViewContext.HttpContext.Request;
+                                foreach (var key in request.Query.Keys)
+                                {
+                                    if (key == "page")
+                                    {
+                                        continue;
+                                    }
+                                    if (request.Query[key].Count > 1)
+                                    {
+                                        foreach (var item in (string[])request.Query[key])
+                                        {
+                                            urlTemplate += "&" + key + "=" + item;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        urlTemplate += "&" + key + "=" + request.Query[key];
+                                    }
+                                }
+
+                                var startIndex = Math.Max(Model.Products.PageIndex - 5, 1);
+                                var finishIndex = Math.Min(Model.Products.PageIndex + 5, Model.Products.PageCount);
+                            }
+
+                            @if (Model.Products.PageCount > 1)
+                            {
+                                <ul class="pagination">
+                                    @if (Model.Products.PageIndex != startIndex)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" title="1" href="@urlTemplate.Replace("{0}", "1")">Đầu</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="@urlTemplate.Replace("{0}", (Model.Products.PageIndex-1).ToString())">Trước</a>
+                                        </li>
+                                    }
+                                    @for (var i = startIndex; i <= finishIndex; i++)
+                                    {
+                                        if (i == Model.Products.PageIndex)
+                                        {
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">@i <span class="sr-only">(current)</span></a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="page-item"><a class="page-link" title="Trang @i.ToString()" href="@urlTemplate.Replace("{0}", i.ToString())">@i</a></li>
+                                        }
+                                    }
+                                    @if (Model.Products.PageIndex != finishIndex)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" title="@Model.Products.PageCount.ToString()" href="@urlTemplate.Replace("{0}", (Model.Products.PageIndex+1).ToString())">Sau</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="@urlTemplate.Replace("{0}", Model.Products.PageCount.ToString())">Cuối</a>
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                        </div>                            
+                        </div>
+                        <!-- pagination close -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,353 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\mobileStore.BackendApi.bundle.scp.css",
+      "PackagePath": "staticwebassets\\mobileStore.BackendApi.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\108dc2e3-c5b6-4dc0-b21a-2351e8977acb.png",
+      "PackagePath": "staticwebassets\\user-content\\108dc2e3-c5b6-4dc0-b21a-2351e8977acb.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\1db3459f-25c3-488a-b4ee-b901f487ea90.png",
+      "PackagePath": "staticwebassets\\user-content\\1db3459f-25c3-488a-b4ee-b901f487ea90.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\26bdfac0-a132-481a-9528-772bade0c202.jpg",
+      "PackagePath": "staticwebassets\\user-content\\26bdfac0-a132-481a-9528-772bade0c202.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\3af0acb4-aa2c-4024-8c4e-c3ef31c61540.png",
+      "PackagePath": "staticwebassets\\user-content\\3af0acb4-aa2c-4024-8c4e-c3ef31c61540.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\47452931-199b-422f-a14a-9be73f43d511.png",
+      "PackagePath": "staticwebassets\\user-content\\47452931-199b-422f-a14a-9be73f43d511.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\47cebd7b-9581-4831-b8f7-c17206a419d4.png",
+      "PackagePath": "staticwebassets\\user-content\\47cebd7b-9581-4831-b8f7-c17206a419d4.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\4da66d46-d96b-449b-ab4e-7e2eb28d7545.png",
+      "PackagePath": "staticwebassets\\user-content\\4da66d46-d96b-449b-ab4e-7e2eb28d7545.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\6eef9974-b5d3-4447-9399-6e021b2a13b8.png",
+      "PackagePath": "staticwebassets\\user-content\\6eef9974-b5d3-4447-9399-6e021b2a13b8.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\88f07e46-d3ef-4d91-a366-c67560e59b23.png",
+      "PackagePath": "staticwebassets\\user-content\\88f07e46-d3ef-4d91-a366-c67560e59b23.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\977135c3-351b-4b2e-8ce9-dd5b3478d4d4.png",
+      "PackagePath": "staticwebassets\\user-content\\977135c3-351b-4b2e-8ce9-dd5b3478d4d4.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\9ca36479-55d6-46af-a96f-ac5852a1d276.webp",
+      "PackagePath": "staticwebassets\\user-content\\9ca36479-55d6-46af-a96f-ac5852a1d276.webp"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\9d01ca71-ca7e-4bdb-8d35-3e7d13c5ed18.png",
+      "PackagePath": "staticwebassets\\user-content\\9d01ca71-ca7e-4bdb-8d35-3e7d13c5ed18.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\a008644b-9429-4631-9bf5-1bc98a365ece.png",
+      "PackagePath": "staticwebassets\\user-content\\a008644b-9429-4631-9bf5-1bc98a365ece.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\a9942124-2c94-499e-b94d-e08ba5b4770d.png",
+      "PackagePath": "staticwebassets\\user-content\\a9942124-2c94-499e-b94d-e08ba5b4770d.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\aacf1120-e29f-478c-a34c-0a0a13de0e76.png",
+      "PackagePath": "staticwebassets\\user-content\\aacf1120-e29f-478c-a34c-0a0a13de0e76.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\ac309a4d-b759-4ca6-9949-19c461eb64b7.png",
+      "PackagePath": "staticwebassets\\user-content\\ac309a4d-b759-4ca6-9949-19c461eb64b7.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\b60f8173-dcb9-47f0-a570-e7417dba866d.jpg",
+      "PackagePath": "staticwebassets\\user-content\\b60f8173-dcb9-47f0-a570-e7417dba866d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\bf980f98-5af5-4105-9fbe-e6d8d55b92ca.png",
+      "PackagePath": "staticwebassets\\user-content\\bf980f98-5af5-4105-9fbe-e6d8d55b92ca.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\ce3fffb4-e9db-4ad6-a646-3d12ce096493.png",
+      "PackagePath": "staticwebassets\\user-content\\ce3fffb4-e9db-4ad6-a646-3d12ce096493.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\d08ea24d-dfef-40a4-b8c0-50a1549333c1.png",
+      "PackagePath": "staticwebassets\\user-content\\d08ea24d-dfef-40a4-b8c0-50a1549333c1.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\e7e20bf6-1b5d-4f8d-8815-355ecd959dca.png",
+      "PackagePath": "staticwebassets\\user-content\\e7e20bf6-1b5d-4f8d-8815-355ecd959dca.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\mobileStore\\mobileStore.BackendApi\\wwwroot\\user-content\\e8ba989e-5cb5-4887-b58a-f2ed0e87d2e9.png",
+      "PackagePath": "staticwebassets\\user-content\\e8ba989e-5cb5-4887-b58a-f2ed0e87d2e9.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.mobileStore.BackendApi.props",
+      "PackagePath": "build\\mobileStore.BackendApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.mobileStore.BackendApi.props",
+      "PackagePath": "buildMultiTargeting\\mobileStore.BackendApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.mobileStore.BackendApi.props",
+      "PackagePath": "buildTransitive\\mobileStore.BackendApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.mobileStore.BackendApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,250 @@
+﻿@model ProductDetailViewModel
+@using System.Security.Claims;
+@using mobileStore.ViewModels.Catalog.Products
+@{
+    ViewData["Title"] = "Product Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
+
+@{
+    //ViewBag.Title = Model.Title;
+    var comments = (IEnumerable<mobileStore.ViewModels.Catalog.Products.ReviewViewModel>)ViewBag.Comments;
+    var ratingSum = ViewBag.RatingSum;
+    var ratingCount = ViewBag.RatingCount;
+    var productId = ViewBag.ProductId;
+    decimal rating = 0;
+
+    if (ratingCount > 0)
+    {
+        rating = (ratingSum / ratingCount);
+    }
+    var totalRating = decimal.Parse(rating.ToString());
+}
+
+<!-- page-header -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="~/">Trang chủ</a></li>
+                        <li>Chi tiết sản phẩm</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page-header-->
+<!-- product-single -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="box">
+                    <!-- product-description -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="margin-right:200px; margin-left: 100px">
+                                <img src="@(Configuration["BaseAddress"] + Model.Product.ThumbnailImage)"
+                                     alt="" style="max-width:280px; min-width:280px; min-height:280px; max-height:280px">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="product-single">
+                                    <h2>@Model.Product.Name</h2>
+                                    <div class="product-rating">
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            if (i <= totalRating)
+                                            {
+                                                <span><i class="fa fa-star"></i></span>
+                                            }
+                                            else
+                                            {
+                                                <span><i class="fa fa-star-o"></i></span>
+                                            }
+                                        }
+                                        <span class="text-secondary">&nbsp;(@ratingCount đánh giá)</span>
+                                    </div>
+                                    @{
+                                        // Chuyển đổi DiscountPercentage sang kiểu số thực
+                                        decimal discountPercentageDecimal = (decimal)@Model.Product.DiscountPercentage;
+
+                                        // Tính giá trị discounted-price
+                                        decimal discountedPrice = @Model.Product.Price - (@Model.Product.Price * (discountPercentageDecimal / 100));
+                                        <p class="product-price" style="font-size: 25px;">
+                                            @(string.Format("{0:N0}" + " vn₫  ", discountedPrice))                                            
+                                            <strike style="color:rgba(128, 128, 128, 0.658); font-size: 18px;">
+                                            @(string.Format("{0:N0}" + " vn₫  ", Model.Product.Price))                                            
+                                            </strike>
+                                        </p>
+                                    }
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <div class="product-quantity">
+                                        <h4>Số lượng</h4>
+                                        <div class="quantity mb20">
+                                            <span class="rest-quantity">
+                                                @Model.Product.Stock sản phẩm có sẵn
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div
+                                    <button type="submit" class="btn btn-default">
+                                        <a class="fa fa-shopping-cart add-to-cart-btn" data-id="@productId"><strong>Thêm vào giỏ hàng</strong></a>
+                                        </button>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="box-head scroll-nav">
+                    <div class="head-title">
+                        <a class="page-scroll active" href="#product">Mô tả sản phẩm</a>
+                        <a class="page-scroll" href="#rating">Đánh giá và nhận xét</a>
+                        <a class="page-scroll" href="#review">Thêm nhận xét</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- highlights -->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="description-details">
+                <div class="description-left" style="min-width:300px;margin-left:30px">
+                    <h2>
+                        Thông tin sản phẩm
+                    </h2>
+                    <p>
+                        @Model.Product.Description
+                    </p>
+                </div>
+                <div class="description-right" style="min-width:300px; margin-right: 30px">
+                    <h2 class="dgctpro">Thông số kĩ thuật</h2>
+                    <table class="charactestic_table">
+                        <tbody>
+                            <tr>
+                                <td class="title_charactestic" width="30%">
+                                    Display
+                                </td>
+                                <td class="content_charactestic">
+                                    @Model.Product.Display
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="title_charactestic" width="30%">
+                                    OperatingSystem
+                                </td>
+                                <td class="content_charactestic">
+                                    @Model.Product.OperatingSystem
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="title_charactestic" width="30%">
+                                    Camera
+                                </td>
+                                <td class="content_charactestic">
+                                    @Model.Product.Camera
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="title_charactestic" width="30%">
+                                    Chip
+                                </td>
+                                <td class="content_charactestic">
+                                    @Model.Product.Chip
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="title_charactestic" width="30%">
+                                    ROM_RAM
+                                </td>
+                                <td class="content_charactestic">
+                                    @Model.Product.ROM_RAM
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="title_charactestic" width="30%">
+                                    Connectivity
+                                </td>
+                                <td class="content_charactestic">
+                                    @Model.Product.Connectivity
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rating reviews  -->
+    <div id="rating">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="box container-rating-review">
+                    <div class="box-head">
+                        <h3 class="head-title">Đánh giá và nhận xét</h3>
+                    </div>
+                    <div class="row">
+                        @if (comments != null)
+                        {
+
+                            @foreach (var c in comments)
+                            {
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <span style="font-weight:bold">@c.UserName</span> <br />
+                                        <i>@c.PublishedDate</i>
+                                        <br />
+                                        @for (var i = 1; i <= c.Rating; i++)
+                                        {
+                                            <span class="starGlowN"></span>
+                                        }
+                                        @for (var i = (c.Rating + 1); i <= 5; i++)
+                                        {
+                                            <span class="starFadeN"></span>
+                                        }
+                                    </div>
+                                    <div class="col-md-9">
+                                        @Html.Raw(c.Comments.Replace("\n", "<br />"))
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div id="review">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <partial name="_CommentBox" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+       

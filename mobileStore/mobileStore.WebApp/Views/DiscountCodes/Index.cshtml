@@ -1,0 +1,128 @@
+﻿@using mobileStore.ViewModels.Common;
+@model PagedResult< mobileStore.ViewModels.Sale.DiscountViewModel>
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:30px">
+        <div class="page-breadcrumb">
+            <ol class="breadcrumb">
+            <li><a href="~/">Trang chủ</a></li>
+                <li>Khuyến mại</li>
+            </ol>
+        </div>
+    </div>
+@foreach (var discount in Model.Items)
+{
+    if (discount.Count > 0)
+    {
+        <div class="product-grid-area">
+            <ul class="products-grid">
+                <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
+                    <div class="product-item" style="max-width:200px">
+                        <div class="item-inner">
+                            <div class="product-thumbnail">
+                                <div class="pr-img-area">
+                                    <a title="@discount.Describe" asp-action="Detail" asp-controller="DiscountCodes" asp-route-discountId="@discount.Id">
+                                        <figure><img class="first-img" src="https://image.freepik.com/free-vector/mega-sale-banner_23-2147987220.jpg" alt="HTML template"></figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="info-inner">
+                                    <div class="item-title">
+                                        <a title="@discount.Describe" asp-action="Detail" asp-controller="DiscountCodes" asp-route-discountId="@discount.Id">
+                                            @Html.Raw(discount.Describe)
+                                        </a>
+                                    </div>
+                                    <span style="background-color:#FE316C;" class="badge badge-pill badge-success">Khuyến mãi</span>
+                                    <div class="item-content">
+                                        <div class="item-price">
+                                            <div class="price-box"> <span class="regular-price"> Còn lại: <span style="color:#EF7E16;font-weight:bold">@discount.Count lần</span>   </span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    }
+}
+<div class="pagination-area  " style="align-items:center">
+</div>
+<div class="row">
+    <!-- pagination start -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="st-pagination">
+            @{
+                //pageIndex=?&keyword=?
+                var urlTemplate = Url.Action() + "?page={0}";
+                var request = ViewContext.HttpContext.Request;
+                foreach (var key in request.Query.Keys)
+                {
+                    if (key == "page")
+                    {
+                        continue;
+                    }
+                    if (request.Query[key].Count > 1)
+                    {
+                        foreach (var item in (string[])request.Query[key])
+                        {
+                            urlTemplate += "&" + key + "=" + item;
+                        }
+                    }
+                    else
+                    {
+                        urlTemplate += "&" + key + "=" + request.Query[key];
+                    }
+                }
+
+                var startIndex = Math.Max(Model.PageIndex - 5, 1);
+                var finishIndex = Math.Min(Model.PageIndex + 5, Model.PageCount);
+            }
+
+            @if (Model.PageCount > 1)
+            {
+                <ul class="pagination">
+                    @if (Model.PageIndex != startIndex)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" title="1" href="@urlTemplate.Replace("{0}", "1")">Đầu</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="@urlTemplate.Replace("{0}", (Model.PageIndex-1).ToString())">Trước</a>
+                        </li>
+                    }
+                    @for (var i = startIndex; i <= finishIndex; i++)
+                    {
+                        if (i == Model.PageIndex)
+                        {
+                            <li class="page-item active">
+                                <a class="page-link" href="#">@i <span class="sr-only">(current)</span></a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item"><a class="page-link" title="Trang @i.ToString()" href="@urlTemplate.Replace("{0}", i.ToString())">@i</a></li>
+                        }
+                    }
+                    @if (Model.PageIndex != finishIndex)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" title="@Model.PageCount.ToString()" href="@urlTemplate.Replace("{0}", (Model.PageIndex+1).ToString())">Sau</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="@urlTemplate.Replace("{0}", Model.PageCount.ToString())">Cuối</a>
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+    <!-- pagination close -->
+</div>
+                </div></div>

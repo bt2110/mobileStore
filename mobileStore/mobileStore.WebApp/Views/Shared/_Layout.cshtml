@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="create ecommerce website template for your online store, responsive mobile templates">
+    <meta name="keywords" content="ecommerce website templates, online store,">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="/css/owl.carousel.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <input type="hidden" id="hidBaseAddress" value="@Configuration["BaseAddress"]" />
+    <!-- header-section-->
+    <div class="header-wrapper">
+        <div class="container">
+            <div class="row">
+                <!-- logo -->
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-8">
+                    <div class="logo">
+                        <a href="~/"><img src="/images/logo.png" alt=""> </a>
+                    </div>
+                </div>
+                <!-- /.logo -->
+                <!-- search -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="search-bg">
+                        <input type="text" class="form-control" placeholder="Search Here">
+                        <button type="Submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!-- /.search -->
+                <!-- account -->
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="account-section">
+                        <ul>
+                            
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li><a href="favorite-list.html"><i class="fa fa-heart"></i></a></li>
+                                <li>
+                                    <a href="/Cart" class="title">
+                                        <i class="fa fa-shopping-cart"></i> <sup class="cart-quantity">
+                                            <span id="lbl_number_of_items_header">0</span>
+                                        </sup>
+                                    </a>
+                                </li>
+                                <li><a href="/Account/Info" class="title hidden-xs">Tài khoản</a></li>
+                                <li class="hidden-xs">  | </li>
+                                <form action="/Account/Logout" method="post">
+                                <li><a onclick="this.closest('form').submit();" class="title hidden-xs">Đăng xuất</a></li>
+                                </form>
+                            }
+                            else
+                            {
+                                <li style="margin-left:50px"><a href="/Account/Login" class="title hidden-xs">Đăng nhập</a></li>
+                            }
+                        </ul>
+                    </div>
+                    <!-- /.account -->
+                </div>
+                <!-- search -->
+            </div>
+        </div>
+        <!-- navigation -->
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- navigations-->
+                        <div id="navigation">
+                            <ul>
+                                <li class="active"><a href="~/">Trang chủ</a></li>
+                                <li><a href="/danh-muc/">Điện thoại</a></li>
+                                <li><a href="/DiscountCodes">Khuyến mại</a> </li>
+                                <li><a href="/Home/Information">Thông tin</a></li>
+                                <li><a href="/Home/Contac">Liên hệ, hỗ trợ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.navigations-->
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderSection("slider", required: false)
+    <div id="mainBody">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- features -->
+    <div class="bg-default pdt40 pdb40">
+        <div class="container">
+            <div class="row">
+                <!-- features -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature-left">
+                        <div class="feature-outline-icon">
+                            <i class="fa fa-credit-card"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="text-white">Thanh toán an toàn</h3>
+                            <p>Mang đến dịch vụ trải nghiệm thoải mái nhất, an toàn, tiện dụng, Mobistore! </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- features -->
+                <!-- features -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature-left">
+                        <div class="feature-outline-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="text-white">Phản hồi 24/7</h3>
+                            <p>Trợ giúp liên lạc, tham khảo , tra cứu 24/7!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- features -->
+                <!-- features -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature-left feature-circle">
+                        <div class="feature-outline-icon">
+                            <i class="fa fa-rotate-left "></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="text-white">Đổi trả miễn phí</h3>
+                            <p>Miễn phí bảo hành đổi trả lên đến 365 ngày!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- features -->
+                <!-- features -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature-left">
+                        <div class="feature-outline-icon">
+                            <i class="fa fa-dollar"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="text-white">Giá tốt nhất</h3>
+                            <p>Giá thành tốt nhất trong thị trường. Cập nhật sản phẩm 24/7!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- features -->
+            </div>
+        </div>
+    </div>
+    <!-- /.features -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- footer-company-links -->
+                <!-- footer-contact links -->
+                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="footer-widget">
+                        <h3 class="footer-title">Thông tin hỗ trợ</h3>
+                        <div class="contact-info">
+                            <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
+                            <span class="contact-text">Phường Linh Trung, Thủ Đức<br>Thành phố Hồ Chí Minh, Việt Nam - 1955</span>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span class="contact-text">+084-123-4567 / 89</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.footer-useful-links -->
+                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="footer-widget">
+                        <h3 class="footer-title">Tiện ích</h3>
+                        <ul class="arrow">
+                            <li><a href="index.html">Trang Chủ </a></li>
+                            <li><a href="product-list.html">Điện thoại</a></li>
+                            <li><a href="about.html">Thông tin</a></li>
+                            <li><a href="blog-default.html">Khuyến mại</a></li>
+                            <li><a href="contact-us.html">Liên hệ, hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.footer-useful-links -->
+                <!-- footer-policy-list-links -->
+                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="footer-widget">
+                        <h3 class="footer-title">Chính sách</h3>
+                        <ul class="arrow">
+                            <li><a href="#">Thanh toán</a></li>
+                            <li><a href="#">Hủy, trả hàng</a></li>
+                            <li><a href="#">Giao hàng và vận chuyển</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.footer-policy-list-links -->
+                <!-- footer-social links -->
+                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="footer-widget">
+                        <h3 class="footer-title">Liên lạc với chúng tôi</h3>
+                        <div class="ft-social">
+                            <span><a href="#" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a></span>
+                            <span><a href="#" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a></span>
+                            <span><a href="#" class="btn-social btn-googleplus"><i class="fa fa-google-plus"></i></a></span>
+                            <span><a href="#" class=" btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a></span>
+                            <span><a href="#" class=" btn-social btn-pinterest"><i class="fa fa-pinterest-p"></i></a></span>
+                            <span><a href="#" class=" btn-social btn-instagram"><i class="fa fa-instagram"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.footer-social links -->
+            </div>
+        </div>
+        <!-- tiny-footer -->
+        <div class="tiny-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <p class="alignright">Copyright © All Rights Reserved 2020 Template Design
+                    </div>
+                </div>
+            </div>
+            <!-- /. tiny-footer -->
+        </div>
+    </div>
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/menumaker.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="/js/sticky-header.js"></script>
+    <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/js/multiple-carousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="/js/site.js"></script>
+    <script src="/js/cart.js"></script>
+    <script>
+        var siteController = new SiteController();
+        siteController.initialize();
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

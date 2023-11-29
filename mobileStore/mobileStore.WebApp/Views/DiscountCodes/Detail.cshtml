@@ -1,0 +1,33 @@
+﻿@model mobileStore.ViewModels.Sale.DiscountViewModel
+
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:30px">
+    <div class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="~/">Trang chủ</a></li>
+            <li>Chi tiết Khuyến mại</li>
+        </ol>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <h2>
+                @Html.Raw(Model.Describe)
+            </h2>
+            <span style="background-color:#FE316C; margin: 20px 0px" class="badge badge-pill badge-success">Khuyến mãi</span>
+        </div>
+        <div class="row">
+            <p>Mã khuyến mại: <span style="font-style:italic; color:red">@Model.Code</span> </p>
+            <p>Còn lại: <span style="font-style:italic; color:red">@Model.Count</span> </p>
+            <p>Bạn chỉ cần nhập mã vào giỏ hàng khi thanh toán</p>
+            <p>Lưu ý: <span style="font-style:italic; color:red">Mỗi mã khuyến mại chỉ sử dụng được 1 lần cho mỗi đơn hàng</span></p>
+        </div>
+        <div class="row">
+            <img style="border-radius:30px;margin: 20px 0px;width:1000px; height:600px" src="https://image.freepik.com/free-vector/mega-sale-banner_23-2147987220.jpg" alt="Alternate Text" />
+        </div>
+    </div>
+</div>

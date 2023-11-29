@@ -1,0 +1,119 @@
+﻿@using mobileStore.ViewModels.Utilities.Enums;
+@model mobileStore.ViewModels.Sale.CheckoutViewModel
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/js/cart.js"></script>
+    <script>
+        var cartController = new CartController();
+        cartController.initialize();
+    </script>
+}
+
+
+<div class="content">
+    <div class="container">
+         @if (TempData["SuccessMsg"] != null)
+         {
+         <div class="alert alert-success">
+         Cảm ơn bạn đã đặt hàng !
+         </div>
+         }
+         else
+        {
+        <div class="row">
+            <div class="cart-content mt30 mb30">
+                <div class="title-header mb20">
+                    <h2 class="title"><strong>Đơn hàng</strong></h2>
+                </div>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th></th>
+                            <th scope="col">Sản phẩm</th>
+                            <th scope="col">Đơn giá</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Thành tiền</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart_body">
+                    </tbody>
+                </table>
+                <div class="prices-summary">
+                    <div class="right-con">
+                        <div class="total-receipt">
+                            <ul class="prices pinside20">
+                                <li class="prices-item">
+                                    <span class="prices-text">Tạm tính</span>
+                                    <span class="prices-value"><span id="lbl_total"></span></span>
+                                </li>
+                                <li class="prices-item">
+                                    <span class="prices-text">Giảm giá</span>
+                                    <span class="prices-value"><span id="lbl_discount_amount"></span>
+                                </li>
+                            </ul>
+                            <div class="prices-total pinside20">
+                                <span class="price-text">Tổng cộng</span>
+                                <span class="prices-value"><span id="lbl_total_discounted"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box checkout-form">
+                    <!-- checkout - form -->
+                    <div class="box-head">
+                        <h2 class="head-title">Thông tin của bạn</h2>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <form asp-action="Checkout" asp-controller="Cart" method="post">
+                                <input type="hidden" asp-for="CheckoutModel.PaymentMethod" value="@PaymentMethod.COD" />
+                                <div class="box-border">
+                                    <ul>
+                                        <li class="row">
+                                            <div class="col-sm-6">
+                                                <label for="Name" class="required">Tên</label>
+                                                <input class="input form-control" style="min-width:500px;max-width:500px" id="txt_name_cod"  type="text" asp-for="CheckoutModel.Name" value="@Model.Name" placeholder="Nhập tên người nhận">
+                                                <span asp-validation-for="CheckoutModel.Name" class="text-danger"></span>
+                                            </div>
+                                            <!--/ [col] -->
+                                        </li>
+                                        <!--/ .row -->
+
+                                        <li class="row">
+                                            <div class="col-xs-12" >
+                                                <label for="Address" class="required">Địa chỉ</label>
+                                                <input class="input form-control" style="min-width:500px;max-width:500px" id="txt_address_cod" type="text" asp-for="CheckoutModel.Address" value="@Model.Address" placeholder="Nhập địa chỉ nhận hàng">
+                                                <span asp-validation-for="CheckoutModel.Address" class="text-danger"></span>
+                                            </div>
+                                            <!--/ [col] -->
+                                        </li>
+                                        <!--/ .row -->
+
+                                        <li class="row">
+                                            <div class="col-sm-6">
+                                                <label for="PhoneNumber" class="required">Số điện thoại</label>
+                                                <input class="input form-control" style="min-width:500px;max-width:500px" id="txt_phoneNumber_cod" type="text" asp-for="CheckoutModel.PhoneNumber" value="@Model.PhoneNumber" placeholder="Nhập số điện thoại nhận hàng">
+                                                <span asp-validation-for="CheckoutModel.PhoneNumber" class="text-danger"></span>
+                                            </div>
+                                            <!--/ [col] -->
+                                        </li>
+                                        <!--/ .row -->
+                                    </ul>
+                                </div>
+                                <button class="button"><span>Đặt hàng</span></button>
+                            </form>
+                            <!-- /.checkout-form -->
+                        </div>
+                    </div>
+                </div>
+            <!-- product total -->
+        </div>
+        }
+    </div>
+</div>

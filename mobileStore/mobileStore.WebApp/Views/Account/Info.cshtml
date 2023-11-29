@@ -1,0 +1,60 @@
+﻿@model mobileStore.ViewModels.System.Users.UserUpdateRequest
+
+@{
+    ViewData["Title"] = "Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="box">
+    <div class="row-account">
+        <div class="left-container">
+            <div class="user-infor">
+                <img src="images/user-img.png" alt="">
+            </div>
+            <div class="side-bar-content">
+                <ul>
+                    <a href="/Account/Info">
+                    <li class="slide-bar active"><i class="fa fa-edit"></i><span>Thông tin tài khoản</span></li></a>
+                    <a href="/Account/ListOrder">
+                    <li class="slide-bar"><i class="fas fa-money-check"></i><span>Quản lý đơn hàng</span></li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="right-container">
+            <h3 class="title-content">Thông tin tài khoản</h3>
+            <div class="account-infor">
+                <form asp-action="Info">
+                    <div asp-validation-summary="ModelOnly" class="input-label"></div>
+                    <input class="form-control" type="hidden" asp-for="Id" />
+                        <div class="form-control">
+                            <label asp-for="FirstName" class="input-label"></label>
+                            <input asp-for="FirstName" class="input-field" />
+                    </div>
+                        <div class="form-control">
+                            <label asp-for="LastName" class="input-label"></label>
+                            <input asp-for="LastName" class="input-field" />
+                    </div>
+                    <div class="form-control">
+                        <label asp-for="Address" class="input-label"></label>
+                        <input asp-for="Address" class="input-field" />
+                    </div>
+                        <div class="form-control">
+                            <label asp-for="Dob" class="input-label"></label>
+                            <input asp-for="Dob" class="input-field" />
+                    </div>
+                        <div class="form-control">
+                            <label asp-for="Email" class="input-label"></label>
+                            <input asp-for="Email" class="input-field" />
+                    </div>
+                        <div class="form-control">
+                            <label asp-for="PhoneNumber" class="input-label"></label>
+                            <input asp-for="PhoneNumber" class="input-field" />
+                    </div>
+                    <div class="form-control">
+                        <input type="submit" value="Lưu lại" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.features -->
+    </div>
+</div>

@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\bin\Debug\net6.0\mobileStore.ViewModels.deps.json
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\bin\Debug\net6.0\mobileStore.ViewModels.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\bin\Debug\net6.0\mobileStore.ViewModels.pdb
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.AssemblyInfo.cs
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\refint\mobileStore.ViewModels.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.pdb
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\ref\mobileStore.ViewModels.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\bin\Debug\net6.0\mobileStore.Data.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\bin\Debug\net6.0\mobileStore.Data.pdb
+C:\Users\HP\Desktop\mobileStore\mobileStore.ViewModels\obj\Debug\net6.0\mobileStore.ViewModels.csproj.CopyComplete

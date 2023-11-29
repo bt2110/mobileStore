@@ -1,0 +1,11 @@
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\bin\Debug\net6.0\mobileStore.Utilities.deps.json
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\bin\Debug\net6.0\mobileStore.Utilities.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\bin\Debug\net6.0\mobileStore.Utilities.pdb
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\mobileStore.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\mobileStore.Utilities.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\mobileStore.Utilities.AssemblyInfo.cs
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\mobileStore.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\mobileStore.Utilities.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\refint\mobileStore.Utilities.dll
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\mobileStore.Utilities.pdb
+C:\Users\HP\Desktop\mobileStore\mobileStore.Utilities\obj\Debug\net6.0\ref\mobileStore.Utilities.dll

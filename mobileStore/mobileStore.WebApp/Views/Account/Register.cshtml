@@ -1,0 +1,149 @@
+﻿@model mobileStore.ViewModels.System.Users.RegisterRequest
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="~/">Trang chủ</a></li>
+                        <li>Đăng kí</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box" style="margin-top:30px">
+    <div class="row">
+        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-12 col-xs-12 ">
+            <!-- form -->
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 mb20">
+                        <h3 class="mb10">Tạo tài khoản</h3>
+                        <p>Vui lòng điền đầy đủ các thông tin bên dưới</p>
+                    </div>
+                    <form asp-action ="Register" asp-controller="Account" method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="FirstName"></label>
+                                <input asp-for="FirstName" style="text-transform: none;" class="form-control" placeholder="FirstName" required>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="LastName"></label>
+                                <input asp-for="LastName" style="text-transform: none;" class="form-control" placeholder="LastName" required>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="Address"></label>
+                                <input asp-for="Address" style="text-transform: none;" class="form-control" placeholder="Address" required>
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="Dob"></label>
+                                <input asp-for="Dob" style="text-transform: none;" class="form-control" required>
+                                <span asp-validation-for="Dob" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="Email"></label>
+                                <input asp-for="Email" style="text-transform: none;" class="form-control" placeholder="Email" required>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="PhoneNumber"></label>
+                                <input asp-for="PhoneNumber" style="text-transform: none;" class="form-control" placeholder="PhoneNumber" required>
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="UserName"></label>
+                                <input asp-for="UserName" style="text-transform: none;" class="form-control" placeholder="UserName" required>
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="Password"></label>
+                                <input asp-for="Password" style="text-transform: none;" class="form-control" placeholder="Password" required>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="ConfirmPassword"></label>
+                                <input asp-for="ConfirmPassword" style="text-transform: none;" class="form-control" placeholder="ConfirmPassword" required>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <button type="submit" class="btn btn-primary btn-block mb10">Đăng Ký</button>
+                            <div>
+                                <p>Bạn đã có tài khoản?<a href="/Account/Login"> Đăng Nhập</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.form -->
+            </div>
+        </div>
+        <!-- features -->
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+            <div class="box-body">
+                <div class="feature-left">
+                    <div class="feature-icon">
+                        <img src="images/feature_icon_1.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Mức độ uy tín!</h4>
+                        <p>
+                            Được đánh giá an toàn, tin cậy hàng đầu Việt Nam với nhiều chính sách hỗ trợ chăm
+                            sóc khách hàng.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-left">
+                    <div class="feature-icon">
+                        <img src="images/feature_icon_2.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Thanh toán tức thì!</h4>
+                        <p>
+                            Thanh toán mọi nơi mọi lúc, giao dịch nhanh gọn, bảo đảm, an toàn, với liên kết
+                            90% ngân hàng, ví tiền, VISA trong toàn quốc!
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-left">
+                    <div class="feature-icon">
+                        <img src="images/feature_icon_3.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Ưu đãi hấp dẫn!</h4>
+                        <p>
+                            Với mong muốn làm hài lòng khách hàng, Mobistore luôn mang đến những ưu đãi cực
+                            kỳ tốt với chất lượng cao
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.features -->
+    </div>
+</div>
